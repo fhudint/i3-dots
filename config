@@ -2,92 +2,92 @@
 font pango: Noto Sans 8
 
 # Open Launcher
-bindsym Mod1+d					exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
-bindsym Mod1+Mod4+d				exec i3-dmenu-desktop -dmenu="dmenu -i -fn 'Noto Sans:size=8'"
+bindsym Mod1+d						exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
+bindsym Mod1+Mod4+d					exec i3-dmenu-desktop -dmenu="dmenu -i -fn 'Noto Sans:size=8'"
 
 # Floating Modifier
 floating_modifier Mod4
 
 # Autostart
-exec --no-atartup-id			xsettingsd &
-exec --no-startup-id 			compton -b
-exec --no-startup-id 			nitrogen --restore
+exec --no-atartup-id					xsettingsd &
+exec --no-startup-id 					compton -b
+exec --no-startup-id 					nitrogen --restore
 exec 							conky -c ~/.config/conky/conky.conkyrc
 
 # Open Terminal Emulator
-bindsym Mod1+t							exec termite
-bindsym Mod4+Return				exec termite
+bindsym Mod1+t						exec termite
+bindsym Mod4+Return					exec termite
 
 # Common Application with Keyboard Shortcut
-bindsym Mod1+F1					exec firefox
-bindsym Mod1+F2					exec geany
-bindsym Mod1+F3					exec 
-bindsym Print					exec scrot 'Screenshot_%a-%d%b%y_%H.%M.png' -e 'mv $f ~/Pictures/Screenshots'
-bindsym Mod1+F9					exec terminal -e 'alsamixer' 
+bindsym Mod1+F1						exec firefox
+bindsym Mod1+F2						exec geany
+bindsym Mod1+F3						exec 
+bindsym Print						exec scrot 'Screenshot_%a-%d%b%y_%H.%M.png' -e 'mv $f ~/Pictures/Screenshots'
+bindsym Mod1+F9						exec terminal -e 'alsamixer' 
 
 # Kill Focused Window
-bindsym Mod1+F4					kill
-bindsym Mod4+x					kill
+bindsym Mod1+F4						kill
+bindsym Mod4+x						kill
 
 # Change Volume
-bindsym XF86AudioRaiseVolume	exec amixer -q -c 1 set Master 5%+
-bindsym XF86AudioLowerVolume	exec amixer -q -c 1 set Master 5%-
-bindsym XF86AudioMute			exec amixer set Master toggle
+bindsym XF86AudioRaiseVolume				exec amixer -q -c 1 set Master 5%+
+bindsym XF86AudioLowerVolume				exec amixer -q -c 1 set Master 5%-
+bindsym XF86AudioMute					exec amixer set Master toggle
 
 # Change Focused Window
-bindsym Mod4+Left				focus left
-bindsym Mod4+Right				focus right
-bindsym Mod4+Up					focus up
-bindsym Mod4+Down				focus down
+bindsym Mod4+Left					focus left
+bindsym Mod4+Right					focus right
+bindsym Mod4+Up						focus up
+bindsym Mod4+Down					focus down
 
 # Move Focused Window
-bindsym Mod4+Shift+Left			move left
-bindsym Mod4+Shift+Right		move right
-bindsym Mod4+Shift+Up			move up
-bindsym Mod4+Shift+Down			move down
+bindsym Mod4+Shift+Left					move left
+bindsym Mod4+Shift+Right				move right
+bindsym Mod4+Shift+Up					move up
+bindsym Mod4+Shift+Down					move down
 
 # Change Container Split Layout
-bindsym Mod4+s					layout toggle split
+bindsym Mod4+s						layout toggle split
 
 # Split in Horizontal Orientation
-bindsym Mod4+h					split h
+bindsym Mod4+h						split h
 
 # Split in Vertical Orientation
-bindsym Mod4+v					split v
+bindsym Mod4+v						split v
 
 # Enter Fullscreen Mode
-bindsym Mod4+f					fullscreen toggle
+bindsym Mod4+f						fullscreen toggle
 
 # Toggle Tilling or Floating
-bindsym Mod4+space				floating toggle
+bindsym Mod4+space					floating toggle
 
 # Change Focus beetwen Tilling or Floating Windiw
-bindsym Mod4+Shift+space		focus mode_toggle
+bindsym Mod4+Shift+space				focus mode_toggle
 
 # Switch Workspace
-bindsym Control+Mod1+Left		workspace prev
-bindsym Control+Mod1+Right		workspace next
-bindsym Mod4+1					workspace 1
-bindsym Mod4+2					workspace 2
-bindsym Mod4+3					workspace 3
-bindsym Mod4+4					workspace 4
-bindsym Mod4+5					workspace 5
-bindsym Mod4+6					workspace 6
+bindsym Control+Mod1+Left				workspace prev
+bindsym Control+Mod1+Right				workspace next
+bindsym Mod4+1						workspace 1
+bindsym Mod4+2						workspace 2
+bindsym Mod4+3						workspace 3
+bindsym Mod4+4						workspace 4
+bindsym Mod4+5						workspace 5
+bindsym Mod4+6						workspace 6
 
 # Move Focused Container to Workspace
-bindsym Mod4+Shift+1			move container to workspace 1
-bindsym Mod4+Shift+2			move container to workspace 2
-bindsym Mod4+Shift+3			move container to workspace 3
-bindsym Mod4+Shift+4			move container to workspace 4
-bindsym Mod4+Shift+5			move container to workspace 5
-bindsym Mod4+Shift+6			move container to workspace 6
+bindsym Mod4+Shift+1					move container to workspace 1
+bindsym Mod4+Shift+2					move container to workspace 2
+bindsym Mod4+Shift+3					move container to workspace 3
+bindsym Mod4+Shift+4					move container to workspace 4
+bindsym Mod4+Shift+5					move container to workspace 5
+bindsym Mod4+Shift+6					move container to workspace 6
 
 # Restart i3
-bindsym Mod1+Mod4+r				restart
+bindsym Mod1+Mod4+r					restart
 
 # Shutdown, Restart and Locking Features
-bindsym Mod1+Escape				mode "$system"
-set $system (1)Lock (2)Exit (3)SwitchUser (4)Suspend (5)Hibernate (6)Reboot (0)Shutdown
+bindsym Mod1+Escape					mode "$system"
+set $system (1) Lock (2) Exit (3) SwitchUser (4) Suspend (5) Hibernate (6) Reboot (0) Shutdown
 mode "$system" {
 	bindsym 1 exec --no-startup-id i3exit lock, mode "default"
 	bindsym 2 exec --no-startup-id i3exit logout, mode "default"
@@ -106,7 +106,7 @@ bindsym Mod4+r					mode "resize"
 mode "resize" {
 	bindsym Left	resize shrink width 5px or 5 ppt
 	bindsym Right	resize grow width 5px or 5 ppt
-	bindsym Up		resize shrink height 5px or 5 ppt
+	bindsym Up	resize shrink height 5px or 5 ppt
 	bindsym Down	resize shrink width 5px or 5 ppt
 	
 	bindsym Escape 	mode "default"

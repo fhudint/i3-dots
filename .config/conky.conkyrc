@@ -1,0 +1,48 @@
+conky.config = {
+	alignment = 'top_right',
+	background = true,
+	color2 = '2ECC71',
+	cpu_avg_samples = 2,
+	default_color = 'FFFFFF',
+	double_buffer = true,
+	font = 'Noto Sans:size=7',
+	gap_x = 20,
+	gap_y = 20,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 2.0,
+	use_xft = true,
+}
+conky.text = [[
+${color2}CPU ${color0}${alignr}${cpu}%
+-------- ${alignr}----------
+${top name 1} $alignr ${top cpu 1}%
+${top name 2} $alignr ${top cpu 2}%
+${top name 3} $alignr ${top cpu 3}%
+${top name 4} $alignr ${top cpu 4}%
+${top name 5} $alignr ${top cpu 5}%
+
+${color2}RAM ${color0}${alignr}${mem}
+${color}RAM:  ${alignr}$mem  /  ${alignr}$memmax
+${color}SWAP: ${alignr}$swap  /  ${alignr}$swapmax
+-------------- ${alignr}-------------
+${top_mem name 1} $alignr ${top_mem mem_res 1}
+${top_mem name 2} $alignr ${top_mem mem_res 2}
+${top_mem name 3} $alignr ${top_mem mem_res 3}
+${top_mem name 4} $alignr ${top_mem mem_res 4}
+${top_mem name 5} $alignr ${top_mem mem_res 5}
+
+Localhost ${addr lo}
+In ${downspeed lo}/s ${alignr}Out ${upspeed lo}/s
+
+#${if existing /sys
+Wi-Fi ${addr wlp2s0}
+In ${downspeed wlp2s0}/s $alignr Out ${upspeed wlp2s0}/s ${alignr}
+ 
+Ethernet ${addr enp1s0f1}
+Inbound ${downspeed enp1s0f1}/s
+Outbound ${upspeed enp1s0f1}/s
+]]

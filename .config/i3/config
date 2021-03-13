@@ -12,7 +12,7 @@ floating_modifier Mod4
 exec --no-atartup-id					xsettingsd &
 exec --no-startup-id 					compton -b
 exec --no-startup-id 					nitrogen --restore
-exec 							conky -c ~/.config/conky/conky.conkyrc
+exec 							conky -c ~/.config/conky/system_status
 
 # Open Terminal Emulator
 bindsym Mod1+t						exec termite
@@ -21,7 +21,7 @@ bindsym Mod4+Return					exec termite
 # Common Application with Keyboard Shortcut
 bindsym Mod1+F1						exec firefox
 bindsym Mod1+F2						exec geany
-bindsym Mod1+F3						exec 
+bindsym Mod1+F3						exec nautilus
 bindsym Print						exec scrot 'Screenshot_%a-%d%b%y_%H.%M.png' -e 'mv $f ~/Pictures/Screenshots'
 bindsym Mod1+F9						exec terminal -e 'alsamixer' 
 
